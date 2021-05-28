@@ -1,0 +1,19 @@
+<div class="tile is-parent is-3 p-1">
+    <article class="tile is-child box p-0 has-background-white-ter">
+        <figure class="image is-256x256">
+            <%= image_tag 'placeholder_post' %>
+        </figure>
+        <div class="p-2">
+            <p class="title is-4 is-danger-text-hover">
+                <%= post.title %>
+            </p>
+            <!--<p class="subtitle is-7"><%= l post.date %></p>-->
+            <div class="content">
+                <p class="content">
+                    <%= truncate(strip_tags(post.content), length: 300) %>
+                </p>
+                <%= link_to "Lire la suite", post, class: "content has-text-danger" %>
+            </div>
+        </div>
+    </article>
+</div>

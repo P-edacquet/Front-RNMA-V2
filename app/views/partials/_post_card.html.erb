@@ -1,0 +1,31 @@
+<div class="column is-one-third">
+    <div class="card">
+
+        <div class="card-image">
+            <figure class="image is-256x256">
+                <%= image_tag 'placeholder_post' %>
+                <div class="is-danger-image-hover">
+                </div>
+            </figure>
+        </div>
+
+        <div class="card-content">
+            <p class="title is-5 card-footer-border-top is-danger-text-hover has-text-centered is-family-primary">
+                <%= post.title %>
+            </p>
+            <p class="subtitle is-7 has-text-weight-normal has-text-centered">
+                <%= l post.date %>
+            </p>
+            <div class="content">
+                <p class="content has-text-centered">
+                    <%= truncate(strip_tags(post.content), length: 120) %>
+                </p>
+            </div>
+            
+        </div>
+
+        <footer class="card-footer">
+            <%= link_to "Lire la suite", post, class: "content card-footer-item has-text-danger has-text-centered" %>
+        </footer>
+    </div>
+</div>

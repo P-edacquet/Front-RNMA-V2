@@ -1,0 +1,36 @@
+<div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">
+        <p class="title is-2 has-text-centered">
+            Agenda
+        </p>
+
+        <table>
+            <tbody>
+                <% @events.each do |event| %>
+                    <tr class="box tr-border">
+                        <td class="subtitle is-7 has-text-weight-normal">
+                            <p>
+                                <%= event.date.day %>
+                            </p>
+                            <p>
+                                <%= l event.date, format: :month %>
+                            </p>
+                            <p>
+                                <%= event.date.year %>
+                            </p>
+                        </td>
+                        <td>
+                            <p class="title is-4">
+                                <%= event.title %>
+                            </p>
+                            <p class="content">
+                                <%= truncate(strip_tags(event.content), length: 120) %>
+                            </p>
+                            <%= link_to "Lire la suite", event, class: "content has-text-danger has-text-centered" %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

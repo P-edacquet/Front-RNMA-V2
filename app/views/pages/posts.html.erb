@@ -1,0 +1,31 @@
+<br><br><br><br>
+
+<p class="title is-2 is-family-primary has-text-centered">Les actualités</p>
+
+<div class="is-ancestor">
+    <% @posts.each_with_index do |post,index| %>
+        <% if index % 4 == 0 %>
+            <div class="tile mx-5">
+            <%= render partial: 'partials/post_tile', locals: { post: post } %>
+        <% elsif index % 4 == 3 %>
+            <%= render partial: 'partials/post_tile', locals: { post: post } %>
+            </div>
+        <% else %>
+            <%= render partial: 'partials/post_tile', locals: { post: post } %>
+        <% end %>
+    <% end %>
+</div>
+
+<%#= render 'partials/pagination' %>
+
+<!-- TODO
+boucler for(i=0 ; i<4 ; i++){
+    parcourir Post{
+        créer une div "tile is-ancestor is-vertical is-gapless mx-5"
+            tous les modulo 4=i{
+                render partial
+            }
+        </div>
+    }
+}
+-->

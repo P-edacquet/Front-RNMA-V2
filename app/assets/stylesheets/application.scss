@@ -1,0 +1,137 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+
+//@import 'bulma/bulma-extensions';
+
+/*.is-2:before,
+.is-2:after {
+content: "";
+position: absolute;
+height: 2px;
+border-bottom: 1px solid #000;
+border-top: 1px solid #000;
+top: .75em;
+width: 100%;
+}
+.is-2:before {
+right: 100%;
+margin-right: 15px;
+}
+.is-2:after {
+left: 100%;
+margin-left: 15px;
+}
+*/
+
+
+
+
+
+//// VARIABLES ////
+
+$bulma-is-danger-color : rgba(243,70,102,255);
+$is-danger-border : (
+    border: solid,
+    border-color: $bulma-is-danger-color,
+    border-width: thin,
+);
+
+
+
+//// BULMA MODIFIED / ADDED ////
+    
+$family-primary : "Google Sans Display","Google Sans","Roboto","Arial",sans-serif;
+//$family-secondary : 
+
+.is-parent{  
+    border-color: $bulma-is-danger-color;
+    border-width: thin;
+}
+
+.ml-7{
+    margin-left: 7rem;
+}
+
+.mr-7{
+    margin-right: 7rem;
+}
+
+.is-danger-text-hover{
+    transition-property: color;
+    transition-duration: 0.25s;
+}
+
+.is-danger-text-hover:hover{
+    color : $bulma-is-danger-color;
+}
+
+
+//// GENERAL ////
+
+a:hover{
+    background-color: transparent;
+}
+
+
+//// NAVBAR ////
+
+.navbar {
+    &.is-transparent {
+    background-color: transparent;
+    background-image: none;
+    backdrop-filter: blur(7px);
+    }
+}
+
+.hero-background{
+    background: linear-gradient(rgba(83, 144, 205,0.7), rgba(229, 89, 40, 0.7));
+}
+
+
+
+
+
+//// POSTS ////
+
+.card-border{
+    border: solid;
+    border-color: $bulma-is-danger-color;
+    border-width: thin;
+    border-top-width: 0;
+}
+
+.card:hover{
+    .is-danger-image-hover{
+        background: linear-gradient(rgba(212,60,24,0) 0%,rgba(212,60,24,0.6) 100%);
+    }
+}
+
+
+
+//// EVENTS ////
+
+.tr-border{
+    border: solid;
+    border-color: $bulma-is-danger-color;
+    border-width: thin;
+}
+
+
+
+
+
+@import 'bulma/bulma';
