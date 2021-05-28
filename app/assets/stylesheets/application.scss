@@ -15,33 +15,7 @@
 */
 
 
-//@import 'bulma/bulma-extensions';
-
-/*.is-2:before,
-.is-2:after {
-content: "";
-position: absolute;
-height: 2px;
-border-bottom: 1px solid #000;
-border-top: 1px solid #000;
-top: .75em;
-width: 100%;
-}
-.is-2:before {
-right: 100%;
-margin-right: 15px;
-}
-.is-2:after {
-left: 100%;
-margin-left: 15px;
-}
-*/
-
-
-
-
-
-//// VARIABLES ////
+//// VARIABLES AND GENERAL ////
 
 $bulma-is-danger-color : rgba(243,70,102,255);
 $is-danger-border : (
@@ -50,13 +24,49 @@ $is-danger-border : (
     border-width: thin,
 );
 
+$color-primary : #f58056;
+$color-secondary : #5bc5ca;
+$color-tertiary : #002531;
+
+/// text color
+.is-color-primary{
+    color: $color-primary;
+}
+
+.is-color-secondary{
+    color: $color-secondary;
+}
+
+.is-color-tertiary{
+    color: $color-tertiary;
+}
+
+/// background color
+.is-background-color-primary{
+    background-color: $color-primary;
+}
+
+.is-background-color-secondary{
+    background-color: $color-secondary;
+}
+
+.is-background-color-tertiary{
+    background-color: $color-tertiary;
+}
+
+
+
+a:hover{
+    background-color: transparent;
+}
 
 
 //// BULMA MODIFIED / ADDED ////
     
-$family-primary : "Google Sans Display","Google Sans","Roboto","Arial",sans-serif;
-//$family-secondary : 
-
+p, a{
+    font-family: 'Roboto', sans-serif;
+    //font-family : 'ZCOOL KuaiLe', cursive, serif;
+}
 .is-parent{  
     border-color: $bulma-is-danger-color;
     border-width: thin;
@@ -79,12 +89,6 @@ $family-primary : "Google Sans Display","Google Sans","Roboto","Arial",sans-seri
     color : $bulma-is-danger-color;
 }
 
-
-//// GENERAL ////
-
-a:hover{
-    background-color: transparent;
-}
 
 
 //// NAVBAR ////
@@ -129,9 +133,6 @@ a:hover{
     border-color: $bulma-is-danger-color;
     border-width: thin;
 }
-
-
-
 
 
 @import 'bulma/bulma';
